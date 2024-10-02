@@ -6,14 +6,14 @@ public class thirdSmallest {
         int secondSm = Integer.MAX_VALUE;
         int thirdSm = Integer.MAX_VALUE;
         for (int idx = 1; idx < arr.length; idx++) {
-            if (arr[idx] < firstSm) {
-                thirdSm = secondSm;
-                secondSm = firstSm;
-                firstSm = arr[idx];
-            } else if (arr[idx] < secondSm && arr[idx] > firstSm) {
+            if (arr[idx] < firstSm) { // 3 <  2 , 1 < 2
+                thirdSm = secondSm;// third =  second
+                secondSm = firstSm;// second = 2
+                firstSm = arr[idx];// first = 1
+            } else if (arr[idx] < secondSm && arr[idx] > firstSm) { // 3< 2 && 3>1
                 thirdSm = secondSm;
                 secondSm = arr[idx];
-            } else if (arr[idx] < thirdSm && arr[idx] > secondSm) {
+            } else if (arr[idx] < thirdSm && arr[idx] > secondSm) { 
                 thirdSm = arr[idx];
             }
         }

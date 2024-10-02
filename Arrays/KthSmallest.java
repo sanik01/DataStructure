@@ -1,22 +1,23 @@
 import java.util.PriorityQueue;
 
 public class KthSmallest {
-    int arr[] = {7, 10, 4, 3, 20, 15};
-    int k = 3; // Change the value of k to find the 3rd smallest element
+    static int arr[] = {7, 10, 4, 3, 20, 15,2};
+    static int k = 5; // Change the value of k to find the 3rd smallest element
    // arr[k-1]
     public static void findKthSmallestUsingMinHeap(int[] arr, int k) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>((a, b) -> b - a);
 
-        for (int i = 0; i < arr.length; i++) {
-            if (i < k) {
-                minHeap.add(arr[i]);
-            } else {
-                if (arr[i] < minHeap.peek()) {
-                    minHeap.poll();
-                    minHeap.add(arr[i]);
-                }
-            }
+        for (int i = 0; i < k; i++) {
+            minHeap.add(arr[i]);
         }
+        for (int i = k; i < arr.length; i++) {
+            if (arr[i] < minHeap.peek()) {
+                minHeap.poll();
+                minHeap.add(arr[i]);
+            }
+        
+        }
+    
 
        
     

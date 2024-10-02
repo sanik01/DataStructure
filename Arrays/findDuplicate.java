@@ -13,9 +13,7 @@ public class findDuplicate {
         for(int idx =0;idx<arr.length;idx++){
             if(idx!=arr.length-1 && arr[idx]==arr[idx+1]){
                 ans.add(arr[idx]);
-                while(idx!=arr.length-1 && arr[idx]==arr[idx+1]){
-                    idx++;
-                }
+                idx++;
             }
         }
         if(ans.isEmpty()){

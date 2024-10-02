@@ -21,6 +21,7 @@ public class findDuplicateOptimise {
             } else {
                 left = right;
                 right++;
+                
             }
         }
         

@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class findPairOptimise {
     public boolean findPair(int arr[], int size, int n) {
-         Arrays.sort(arr);  // sort the input array in ascending order
+     Arrays.sort(arr);  // sort the input array in ascending order
     int left = 0, right = 1;  // initialize two pointers
 
     // loop through the array until either pointer goes out of bounds

@@ -10,10 +10,11 @@ public class KthLargest {
         //arr[n - k]
      }
          // Approach 2: Using a min heap
-         public static int findKthLargestUsingMinHeap(int[] arr, int k) {
+         public static void findKthLargestUsingMinHeap(int[] arr, int k) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         for (int i = 0; i < k; i++) {
-            minHeap.add(arr[i]);
+            minHeap.add(arr[i]);//
+
         }
         for (int i = k; i < arr.length; i++) {
             if (arr[i] > minHeap.peek()) {
@@ -21,7 +22,7 @@ public class KthLargest {
                 minHeap.add(arr[i]);
             }
         }
-        return minHeap.peek();
+         System.out.println(minHeap.peek());
   
 
     }

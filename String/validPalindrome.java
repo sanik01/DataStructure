@@ -22,6 +22,5 @@ class validPalindrome {
             left++;
             right--;
         }
-        return true;
     }
 }
