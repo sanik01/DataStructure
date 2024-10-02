@@ -7,7 +7,7 @@ public class InsertLinkedList {
     }
     void insert(int data,Node head,int pos);
     Node toAdd = new Node (data);
-
+ // here are  base rule
     if(pos==0){
         toAdd.next=head;
         head= toAdd;
